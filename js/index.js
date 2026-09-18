@@ -1,14 +1,21 @@
+// do whatever
 
+import Header from "../components/Header.js";
+import Hero from "../components/Hero.js";
 
 const rootElm = document.querySelector("#root")
 
-function render () {
+function render() {
     rootElm.innerHTML = "";
+    rootElm.append(Header())
 
-    
+    let mainElm = document.createElement("main")
+    mainElm.append(Hero())
+
+    rootElm.append(mainElm)
 }
 
-function init(){
+function init() {
     render()
 
 }
